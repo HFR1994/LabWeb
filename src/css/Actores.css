@@ -1,6 +1,6 @@
 .card_holder{
     width: 342px;
-    background-color: white;
+    background-color: #fefefe;
     position: relative;
     margin-top: 10px;
     webkit-box-shadow: 2px 2px 8px 2px rgba(204, 204, 204, 1);
@@ -8,6 +8,52 @@
     position: relative;
     margin-left: 20px;
     display: inline-block;
+    animation: positive 2s;
+    -webkit-animation: positive 2s;
+    --moz-animation: positive 2s;
+}
+
+.negative{
+    animation: negative 2s;
+    -webkit-animation: negative 2s;
+    --moz-animation: negative 2s;
+    background-color: #ffe3dd;
+}
+
+@keyframes positive
+{
+    0%   {background: #fdffe3;}
+    100%  {background: #fefefe;}
+}
+
+@-webkit-keyframes positive
+{
+    0%   {background: #fdffe3;}
+    100%  {background: #fefefe;}
+}
+
+@-moz-keyframes positive
+{
+    0%   {background: #fdffe3;}
+    100%  {background: #fefefe;}
+}
+
+@keyframes negative
+{
+    0%   {background: #fdffe3;}
+    100%  {background: #ffe3dd;}
+}
+
+@-webkit-keyframes negative
+{
+    0%   {background: #fdffe3;}
+    100%  {background: #ffe3dd;}
+}
+
+@-moz-keyframes negative
+{
+    0%   {background: #fdffe3;}
+    100%  {background: #ffe3dd;}
 }
 
 .title_holder {
@@ -47,6 +93,14 @@
     text-align: center;
     font-size: 27px;
     margin: 50px auto auto;
+}
+
+.empty{
+    width: 297px;
+    text-align: center;
+    margin: 50px auto auto;
+    color: #d40000;
+    font-size: 18px;
 }
 
 .title {

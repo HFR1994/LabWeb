@@ -35,9 +35,12 @@ class App extends Component {
                     ]
                 );
 
-                let shows = [...this.state.shows, {id: id, name: name, actores: actores, newly:true}];
+                let shows = [...this.state.shows, {id: id, name: name, actores: actores}];
                 this.setState({shows: shows, msg: "Serie agregada correctamente" ,counter: this.state.counter + 1});
-            });
+            }).catch(error => {
+                let shows = [...this.state.shows, {id: id, name: name, actores: []}];
+                this.setState({shows: shows, msg: "Serie agregada correctamente" ,counter: this.state.counter + 1});
+        });
     }
 
     removeShows(id){
@@ -56,12 +59,12 @@ class App extends Component {
                     {(msg === undefined) ? "":<div id="message">{msg}</div>}
                 </div>
                 <div id="contain_cards">
-                {(shows.length === 0) ? <p id="empty">Empieza agregando una serie</p>
-                    :
-                    shows.map((item) =>
-                        <Actores key={item.id} {...item} remove={this.removeShows}/>
-                    )
-                }
+                    {(shows.length === 0) ? <p id="empty">Empieza agregando una serie</p>
+                        :
+                        shows.map((item) =>
+                            <Actores key={item.id} {...item} remove={this.removeShows}/>
+                        )
+                    }
                 </div>
             </div>
         );
