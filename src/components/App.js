@@ -35,7 +35,7 @@ class App extends Component {
                     ]
                 );
 
-                let shows = [...this.state.shows, {id: id, name: name, actores: actores}];
+                let shows = [...this.state.shows, {id: id, name: name, actores: actores, newly:true}];
                 this.setState({shows: shows, msg: "Serie agregada correctamente" ,counter: this.state.counter + 1});
             });
     }
