@@ -110,6 +110,7 @@
     margin: 0;
     padding: 35px 0 15px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .id_value {

@@ -1,0 +1,29 @@
+#app-large{
+    margin: auto;
+}
+
+#breadcrumbs_container{
+    height: 70px;
+    background-color: white;
+}
+
+#return{
+    text-decoration: underline;
+    color: #7bd196;
+    cursor: pointer;
+    display: block;
+    font-size: 22px;
+    padding: 22px 5px 22px 22px;
+    float: left;
+}
+
+#actor_container{
+    padding: 10px 20px;
+}
+
+#title_value{
+    width: 30%;
+    float: left;
+    margin: 0;
+    padding: 15px 7px;
+}

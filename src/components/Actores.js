@@ -19,7 +19,7 @@ class Actores extends Component {
             <div className={(this.actores.length === 0) ? ["card_holder negative"]:["card_holder"]}>
                 <img alt="remove" className="remove_icon" onClick={() => this.remove(this.id)} src={Cruz}/>
                 <div className="title_holder">
-                    <h3 className="title">{this.name}</h3>
+                    <a onClick={() => this.props.history.push("/serie/"+this.id)}><h3 className="title">{this.name}</h3></a>
                     <div className="id_value">{this.id}</div>
                 </div>
                 <div className="container_list">
@@ -27,7 +27,7 @@ class Actores extends Component {
                         {(this.actores.length === 0) ? <p className="empty">Sin Actores</p>
                             :
                             this.actores.map((actor) =>
-                                <Actor key={actor.id} {...actor}/>
+                                <Actor key={actor.id} large={false} {...actor}/>
                             )
                         }
                     </ul>
