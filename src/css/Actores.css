@@ -42,9 +42,9 @@
 
 #empty{
     width: 450px;
-    margin: 35px 30px;
     text-align: center;
     font-size: 27px;
+    margin: 50px auto auto;
 }
 
 .title {
