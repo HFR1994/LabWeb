@@ -85,7 +85,7 @@ class Person extends Component {
                         <h2>Series</h2>
                         <ul>
                             {(!shows) ?
-                                <li id="no_serie">No hay series relacionadas</li>
+                                <li id="no_serie">No hay ninguna serie relacionadas</li>
                                 :
                                 shows.map((item) =>
                                     <li key={item.id}>{item.year} - {item.name}</li>
