@@ -10,8 +10,8 @@ class Actores extends Component {
         this.id = props.id;
         this.name = props.name;
         this.actores = props.actores;
-        this.newly = props.newly;
         this.remove = props.remove;
+        this.link = props.link;
     }
 
     render() {

@@ -76,7 +76,7 @@ class Home extends Component {
                     {(shows.length === 0) ? <p id="empty">Empieza agregando una serie</p>
                         :
                         shows.map((item) =>
-                            <Actores key={item.id} {...item} remove={this.removeShows} history={this.props.history}/>
+                            <Actores key={item.id} {...item} link={false} remove={this.removeShows} history={this.props.history}/>
                         )
                     }
                 </div>

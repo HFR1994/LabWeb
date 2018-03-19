@@ -11,7 +11,7 @@ class Serie extends Component {
         this.id=this.props.match.params.id;
         const cachedHits = localStorage.getItem("shows");
         if (cachedHits) {
-            const name = JSON.parse(cachedHits).filter(x => x.id === '2');
+            const name = JSON.parse(cachedHits).filter(x => x.id === this.id);
             if(name.length === 0){
                 this.state={actores:[]};
                 axios.get("http://api.tvmaze.com/shows/"+this.id)
@@ -65,7 +65,7 @@ class Serie extends Component {
                     {(actores.length === 0) ? <p id="empty">Esa serie no Existe</p>
                         :
                         actores.map((item) =>
-                            <Actor key={item.id} large={true} {...item} />
+                            <Actor history={this.props.history} key={item.id} large={true} serie={this.id} {...item} />
                         )
                     }
                 </ul>

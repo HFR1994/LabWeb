@@ -1,0 +1,72 @@
+#containers_holder{
+    display: inline-block;
+    width: 95%;
+    margin: 30px 2.5%;
+}
+
+.containers {
+    width: 45%;
+    float: left;
+    background-color: white;
+    margin: 0 30px;
+    display: inline-flex;
+}
+
+#profile-container{
+    height: 217px;
+}
+
+#containers_holder .actor_container{
+    margin-left: 10px;
+    width: calc(100% - 200px);
+    display: inline-table;
+    padding: 48px 0;
+}
+
+#containers_holder .actor-element{
+    margin: 10px;
+}
+
+#containers_holder .actor_image{
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    display: inline-block;
+    padding: 19px;
+    margin: 0;
+}
+
+#containers_holder p.actor_element {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+#containers_holder #series_container{
+    display: block;
+}
+
+#containers_holder #series_container h2{
+    display: block;
+    padding: 20px 20px 10px 20px;
+    margin: 0;
+}
+
+#containers_holder #series_container ul{
+    display: block;
+    margin: 0;
+    padding: 0 20px 20px 20px;
+    list-style-type: none;
+    font-size: 19px;
+}
+
+#containers_holder #series_container ul li{
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#containers_holder #no_serie{
+    margin: 10px 50px;
+    padding: 0;
+    text-align: center;
+    font-size: 25px;
+}
