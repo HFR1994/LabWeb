@@ -1,0 +1,39 @@
+import React, {Component} from 'react';
+import '../css/Person.css';
+import Actor from "./Actor";
+import Cruz from "../images/remove.png"
+
+
+class Person extends Component {
+    constructor(props) {
+        super(props);
+        this.id = props.id;
+        this.name = props.name;
+        this.actores = props.actores;
+        this.newly = props.newly;
+        this.remove = props.remove;
+    }
+
+    render() {
+        return(
+            <div className={(this.actores.length === 0) ? ["card_holder negative"]:["card_holder"]}>
+                <img alt="remove" className="remove_icon" onClick={() => this.remove(this.id)} src={Cruz}/>
+                <div className="title_holder">
+                    <a onClick={() => this.props.history.push("/serie/"+this.id)}><h3 className="title">{this.name}</h3></a>
+                    <div className="id_value">{this.id}</div>
+                </div>
+                <div className="container_list">
+                    <ul className="actores">
+                        {(this.actores.length === 0) ? <p className="empty">Sin Person</p>
+                            :
+                            this.actores.map((actor) =>
+                                <Actor key={actor.id} large={false} {...actor}/>
+                            )
+                        }
+                    </ul>
+                </div>
+            </div>);
+    }
+}
+export default Person;
+
