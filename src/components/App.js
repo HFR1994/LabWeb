@@ -55,7 +55,7 @@ class App extends Component {
         return (
             <div id="app" >
                 <AddActorForm onNewActor = { this.addSerie }/>
-                {(shows.length === 0) ? <p id="empty">Agrega un Actor</p>
+                {(shows === undefined) ? <p id="empty">Empieza agregando una serie</p>
                     :
                     shows.map((show) =>
                         <Actores key={show.id} name = {show.name} actors = {show.actores} remove={this.removeShows}/>
