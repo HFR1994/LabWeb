@@ -1,0 +1,49 @@
+.actor {
+    width: 223px;
+    background-color: white;
+    margin: 5px;
+    padding: 20px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-shadow: 2px 2px 8px 2px rgba(204, 204, 204, 1);
+    box-shadow: 2px 2px 8px 2px rgba(204, 204, 204, 1);
+    position: relative;
+}
+
+.actor:last-child {
+    margin-bottom: 50px
+}
+
+.actor_container{
+    margin-left:10px;
+}
+
+.actor_image{
+    width: 80px;
+    height: 80px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    min-width: 80px;
+}
+
+.actor_name{
+    margin: 0;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.actor_character{
+    margin: 0;
+    font-size: 19px;
+    color: #393F47;
+    font-weight: normal;
+}
+
+.remove{
+    position: absolute;
+    top:15px;
+    right: 15px;
+    color: red;
+}
